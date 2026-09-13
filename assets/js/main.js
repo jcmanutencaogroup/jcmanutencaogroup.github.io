@@ -8,8 +8,8 @@
 
   /* -------------------------------------------------------
      1. TEMA CLARO / ESCURO
-     O tema inicial ja foi aplicado pelo script no <head>,
-     para nao piscar. Aqui so tratamos o botao e o sistema.
+     O tema inicial já foi aplicado pelo script no <head>
+     para não piscar. Aqui só tratamos o botão e o sistema.
   ------------------------------------------------------- */
   var raiz = document.documentElement;
   var btnTema = document.getElementById('tema');
@@ -29,7 +29,7 @@
 
   aplicarTema(raiz.getAttribute('data-tema') || 'claro');
 
-  // Acompanha o sistema enquanto o visitante nao escolher manualmente
+  // Acompanha o sistema enquanto o visitante não escolher manualmente.
   var mq = window.matchMedia('(prefers-color-scheme: dark)');
   var ouvirSistema = function (e) {
     var salvo = null;
@@ -171,9 +171,9 @@
   }
 
   /* -------------------------------------------------------
-     7. PORTFOLIO — toque no celular
-     No computador a troca e por hover (CSS). No celular,
-     que nao tem hover, o toque alterna para a foto do antes.
+     7. PORTFÓLIO — toque no celular
+     No computador, a troca é acionada por hover (CSS). No celular,
+     que não tem hover, o toque alterna para a foto anterior.
   ------------------------------------------------------- */
   Array.prototype.forEach.call(document.querySelectorAll('.work__media'), function (media) {
     media.addEventListener('click', function () { media.classList.toggle('is-antes'); });
